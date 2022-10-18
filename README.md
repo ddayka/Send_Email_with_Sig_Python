@@ -1,13 +1,13 @@
 # Send_Email_with_Signature_Python
 Send Email with a Signature and add attachments (in Python)
 
-Input: <br>
-Required: <br>
+**Input:** <br>
+_Required:_ <br>
 Subject (Str): email subject <br>
 Body (Str): Email body as string (simple string body) <br>
 to (str or list): email adress or list of email adresses to recipient <br>
 
-Optional: <br>
+_Optional:_ <br>
 cc (str or list): self-explanitory <br>
 bcc (str or list): self-explanitory <br>
 attachment (str): FilePath of file you want to attach to your email. <br>
