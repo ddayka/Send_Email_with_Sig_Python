@@ -4,12 +4,17 @@ import mimetypes
 from email.message import EmailMessage
 from email.utils import make_msgid
 
-def send_pdf(subject, body, attachment='', to='service@life-raft.com'):
+def send_pdf(subject, body, to, cc=None, bcc=None, attachment=''):
+    if cc is None:
+        cc = []
+    if bcc is None:
+        bcc = []
     msg = EmailMessage()
     msg['Subject'] = subject
     msg['From'] = 'operations@life-raft.com'
     msg['To'] = to
-    msg['Cc'] = ''
+    msg['Cc'] = cc
+    msg['Bcc'] = bcc
 
     msg.set_content(body)
 
